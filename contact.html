@@ -17,8 +17,31 @@
     />
 
     <style>
+
+           * Default: left-aligned for large screens */
+.navbar-nav {
+  text-align: left;
+  width: auto; /* keeps items naturally aligned */
+}
+
+/* Small screens: center the nav links */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+}
+.navbar-nav .nav-item {
+  display: inline-block;
+  float: none;
+}
+
+.navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+
       footer {
-      background-color: #a02525;
+      background-color: #5f0909;
       color: white;
       text-align: center;
       padding: 25px 20px;
@@ -102,25 +125,25 @@
             <h3>Contact Info</h3>
             <p style="display:flex; align-items:center;">
               <a href="https://www.google.com/maps/search/?api=1&query=Akright+City+Kakungulu+Bwebajja+Estate+Uganda" target="_blank" style="text-decoration:none; color:inherit; display:flex; align-items:center;">
-                <i class="bi bi-geo-alt" style="font-size:1.5rem; color:#a02525; margin-right:10px;"></i> Akright City, Kakungulu Bwebajja Estate, Uganda
+                <i class="bi bi-geo-alt" style="font-size:1.5rem; color:#5f0909; margin-right:10px;"></i> Akright City, Kakungulu Bwebajja Estate, Uganda
               </a>
             </p>
 
             <p style="display:flex; align-items:center;">
               <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pe2023sh@gmail.com" target="_blank" style="text-decoration:none; color:inherit; display:flex; align-items:center;">
-                <i class="bi bi-envelope" style="font-size:1.5rem; color:#a02525; margin-right:10px;"></i> pe2023sh@gmail.com
+                <i class="bi bi-envelope" style="font-size:1.5rem; color:#5f0909; margin-right:10px;"></i> pe2023sh@gmail.com
               </a>
             </p>
 
             <p style="display:flex; align-items:center;">
               <a href="tel:+256782044392" style="text-decoration:none; color:inherit; display:flex; align-items:center;">
-                <i class="bi bi-telephone" style="font-size:1.5rem; color:#a02525; margin-right:10px;"></i> +256 782044392
+                <i class="bi bi-telephone" style="font-size:1.5rem; color:#5f0909; margin-right:10px;"></i> +256 782044392
               </a>
             </p>
 
             <p style="display:flex; align-items:center;">
               <a href="https://wa.me/256782044392" target="_blank" style="text-decoration:none; color:inherit; display:flex; align-items:center;">
-                <i class="bi bi-whatsapp" style="font-size:1.5rem; color:#a02525; margin-right:10px;"></i> Chat on WhatsApp
+                <i class="bi bi-whatsapp" style="font-size:1.5rem; color:#5f0909; margin-right:10px;"></i> Chat on WhatsApp
               </a>
             </p>
 

@@ -21,7 +21,7 @@
 
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Times New Roman', Times, serif;
       background-color: #f8f9fa;
       color: #333;
       padding-top: 70px; 
@@ -29,7 +29,7 @@
     .section-title {
       font-size: 1.5rem;
       font-weight: bold;
-      color: #a02525;
+      color: #5f0909;
       margin-bottom: 15px;
       border-bottom: 2px solid #a02525;
       display: inline-block;
@@ -63,7 +63,7 @@
       font-size: 0.85rem;
     }
     footer {
-      background-color: #a02525;
+      background-color: #5f0909;
       color: white;
       text-align: center;
       padding: 25px 20px;
@@ -78,13 +78,27 @@
       text-decoration: underline;
       color: wheat;
     }
+
+    * Default: left-aligned for large screens */
+.navbar-nav {
+  text-align: left;
+  width: auto; /* keeps items naturally aligned */
+}
+
+/* Small screens: center the nav links */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+}
   </style>
 </head>
 <body>
 
  <!-- Navbar -->
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgb(160, 37, 37);">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #5f0909; font-size: 20px; ">
     <div class="container">
       <!-- Brand -->
       <a class="navbar-brand fw-bold" href="index.html" style="font-size: 30px;">Patience Aturanitwe</a>
@@ -156,7 +170,7 @@
     <!-- Download CV Button -->
 <div style="text-align:center; margin: 20px 0;">
   <a href="Patience Aturanitwe.pdf" download
-     style="background-color:#a02525; color:white; padding:12px 30px; border-radius:50px; 
+     style="background-color:#5f0909; color:white; padding:12px 30px; border-radius:50px; 
             text-decoration:none; font-weight:bold; font-size:16px; display:inline-block;">
     <i class="bi bi-download"></i> Download CV
   </a>
@@ -171,42 +185,42 @@
 
     <!-- Web Development Column -->
     <div class="col-md-3" style="margin-bottom:20px; font-size: 50px;">
-      <h5 style="background:#a02525; color:#fff; padding:10px; border-radius:8px; text-align:center;">
+      <h5 style="background:#5f0909; color:#fff; padding:10px; border-radius:8px; text-align:center;">
          Web Development
       </h5>
-      <span style="display:inline-block; background:#f2f2f2; color:#a02525; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">HTML</span>
-      <span style="display:inline-block; background:#f2f2f2; color:#a02525; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">CSS</span>
-      <span style="display:inline-block; background:#f2f2f2; color:#a02525; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Bootstrap</span>
+      <span style="display:inline-block; background:#f2f2f2; color:#5f0909; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">HTML</span>
+      <span style="display:inline-block; background:#f2f2f2; color:#5f0909; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">CSS</span>
+      <span style="display:inline-block; background:#f2f2f2; color:#5f0909; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Bootstrap</span>
     </div>
 
     <!-- Graphic Design Column -->
     <div class="col-md-3" style="margin-bottom:20px;">
-      <h5 style="background:#a02525; color:#fff; padding:10px; border-radius:8px; text-align:center;">
+      <h5 style="background:#5f0909; color:#fff; padding:10px; border-radius:8px; text-align:center;">
         Graphic Design
       </h5>
-      <span style="display:inline-block; background:#f2f2f2; color:#a02525; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Adobe Photoshop</span>
-      <span style="display:inline-block; background:#f2f2f2; color:#a02525; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Canva</span>
+      <span style="display:inline-block; background:#f2f2f2; color:#5f0909; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Adobe Photoshop</span>
+      <span style="display:inline-block; background:#f2f2f2; color:#5f0909; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Canva</span>
     </div>
 
     <!-- Digital Tools Column -->
     <div class="col-md-3" style="margin-bottom:20px;">
-      <h5 style="background:#a02525; color:#fff; padding:10px; border-radius:8px; text-align:center;">
+      <h5 style="background:#5f0909; color:#fff; padding:10px; border-radius:8px; text-align:center;">
        Digital Tools
       </h5>
-      <span style="display:inline-block; background:#f2f2f2; color:#a02525; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Microsoft Office Suite</span>
+      <span style="display:inline-block; background:#f2f2f2; color:#5f0909; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Microsoft Office Suite</span>
     </div>
 
     <!-- Soft Skills Column -->
     <div class="col-md-3" style="margin-bottom:20px;">
-      <h5 style="background:#a02525; color:#fff; padding:10px; border-radius:8px; text-align:center;">
+      <h5 style="background:#5f0909; color:#fff; padding:10px; border-radius:8px; text-align:center;">
          Soft Skills
       </h5>
-      <span style="display:inline-block; background:#f2f2f2; color:#a02525; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Teamwork</span>
-      <span style="display:inline-block; background:#f2f2f2; color:#a02525; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Creativity</span>
-      <span style="display:inline-block; background:#f2f2f2; color:#a02525; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Communication</span>
-      <span style="display:inline-block; background:#f2f2f2; color:#a02525; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Problem Solving</span>
-      <span style="display:inline-block; background:#f2f2f2; color:#a02525; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Time Management</span>
-      <span style="display:inline-block; background:#f2f2f2; color:#a02525; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Adaptability</span>
+      <span style="display:inline-block; background:#f2f2f2; color:#5f0909; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Teamwork</span>
+      <span style="display:inline-block; background:#f2f2f2; color:#5f0909; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Creativity</span>
+      <span style="display:inline-block; background:#f2f2f2; color:#5f0909; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Communication</span>
+      <span style="display:inline-block; background:#f2f2f2; color:#5f0909; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Problem Solving</span>
+      <span style="display:inline-block; background:#f2f2f2; color:#5f0909; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Time Management</span>
+      <span style="display:inline-block; background:#f2f2f2; color:#5f0909; padding:6px 12px; border-radius:20px; margin:4px; font-size:14px;">Adaptability</span>
     </div>
 
   </div>
@@ -215,7 +229,7 @@
 
     <!-- Projects & Technical Experience -->
     <div class="mb-5">
-      <h2 class="section-title">Relevant Projects & Technical Experience</h2>
+      <h2 class="section-title" >Relevant Projects & Technical Experience</h2>
       <ul>
         <li>
           <strong>HERAD Intercontinental Services Ltd Cassava Export Website:</strong> Fully responsive website showcasing products, company information, and client inquiries. Developed with HTML, CSS, and Canva.

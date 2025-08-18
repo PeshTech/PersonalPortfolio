@@ -21,41 +21,80 @@
       rel="stylesheet"
     />
 
-   <style>
-    /* Row-specific image heights */
-    .web-projects img { height:200px; object-fit:contain; }
-    .graphics-projects img { height:380px; object-fit:contain; }
-    .portfolio-projects img { height:220px; object-fit: contain;  }
+    <style>
+      /* Row-specific image heights */
+      .web-projects img {
+        height: 200px;
+        object-fit: contain;
+      }
+      .graphics-projects img {
+        height: 380px;
+        object-fit: contain;
+      }
+      .portfolio-projects img {
+        height: 220px;
+        object-fit: contain;
+      }
 
-    .card-body { display:flex; flex-direction:column; }
-    .card-body .btn { margin-top:auto; }
-    footer {
-      background-color: #a02525;
-      color: white;
-      text-align: center;
-      padding: 25px 20px;
-      margin-top: 50px;
-    }
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    footer a:hover {
-      text-decoration: underline;
-      color: wheat;
-    }
-  </style>
+      .card-body {
+        display: flex;
+        flex-direction: column;
+      }
+      .card-body .btn {
+        margin-top: auto;
+      }
 
+      footer {
+        background-color: #6e0707;
+        color: white;
+        text-align: center;
+        padding: 25px 20px;
+        margin-top: 50px;
+      }
+      footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      footer a:hover {
+        text-decoration: underline;
+        color: wheat;
+      }
+
+      /* White Hamburger */
+      .navbar-toggler {
+        border: none;
+      }
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+
+      * Default: left-aligned for large screens */
+.navbar-nav {
+  text-align: left;
+  width: auto; /* keeps items naturally aligned */
+}
+
+/* Small screens: center the nav links */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+}
+      .navbar-nav .nav-item {
+        display: inline-block;
+        float: none;
+      }
+    </style>
   </head>
   <body>
     <!-- =================== NAVIGATION BAR =================== -->
     <header>
       <nav
-        role="navigation"
-        aria-label="Main navigation"
+        class="navbar navbar-expand-lg"
         style="
-          background-color: rgb(160, 37, 37);
+          background-color: #5f0909;
           padding: 17px;
           font-size: 20px;
           font-family: 'Times New Roman', Times, serif;
@@ -65,45 +104,62 @@
         "
       >
         <div class="container">
-          <div class="d-flex justify-content-between align-items-center w-100">
-            <!-- Logo Left -->
-            <a
-              href="/"
-              class="d-flex align-items-center text-white text-decoration-none"
+          <!-- Logo Left -->
+          <a
+            href="/"
+            class="d-flex align-items-center text-white text-decoration-none"
+          >
+            <span
+              class="notranslate"
+              translate="no"
+              style="font-size: 30px; font-weight: bold"
+              >Patience Aturanitwe</span
             >
-              <span
-                class="notranslate"
-                translate="no"
-                style="font-size: 30px; font-weight: bold"
-                >Patience Aturanitwe</span
-              >
-            </a>
+          </a>
 
-            <!-- Nav + Translate Right -->
-            <div class="d-flex align-items-center">
-              <ul class="nav mb-0">
-                <li>
-                  <a href="index.html" class="nav-link text-white">Home</a>
-                </li>
-                <li>
-                  <a href="about.html" class="nav-link text-white">About</a>
-                </li>
-                <li>
-                  <a href="projects.html" class="nav-link text-white active"
-                    >Projects</a
-                  >
-                </li>
+          <!-- Toggler for small screens -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-               <li><a href="services.html" class="nav-link text-white">Services</a></li>
-                <li><a href="cv.html" class="nav-link text-white">CV</a></li>
-                <li>
-                  <a href="contact.html" class="nav-link text-white">Contact</a>
-                </li>
-              </ul>
+          <!-- Collapsible Nav -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link text-white">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link text-white">About</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="projects.html"
+                  class="nav-link text-white active"
+                  aria-current="page"
+                  >Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="services.html" class="nav-link text-white">Services</a>
+              </li>
+              <li class="nav-item">
+                <a href="cv.html" class="nav-link text-white">CV</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link text-white">Contact</a>
+              </li>
+            </ul>
 
-              <!-- Translate Dropdown -->
-              <div id="google_translate_element" style="margin-left: 15px"></div>
-            </div>
+            <!-- Translate Dropdown -->
+            <div id="google_translate_element" class="ms-lg-3 mt-3 mt-lg-0"></div>
           </div>
         </div>
       </nav>

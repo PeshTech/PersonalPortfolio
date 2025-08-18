@@ -26,81 +26,153 @@
       rel="stylesheet"
     />
 
-    <!-- Maroon Page Glow -->
     <style>
-      html, body {
-        height: 100%;
+      /* Body background */
+      body {
         margin: 0;
-        background-color: #fff6f6; /* lighter for better glow contrast */
+        font-family: 'Times New Roman', Times, serif;
+        color: #333;
+        background: linear-gradient(135deg, #fff6f6, #ffeaea);
       }
 
-      /* Fixed maroon glow frame */
-      body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        background: transparent;
-        box-shadow:
-          inset 0 0 10px #7a1a1a,
-          inset 0 0 10px #a02525,
-          inset 0 0 10px #b84c4c,
-          inset 0 0 10px #d66d6d;
-        z-index: 9999;
+      /* Navbar styling */
+      .navbar {
+        background-color: #5f0909;
+        padding: 17px;
+        font-size: 20px;
+      }
+
+      .navbar-brand {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      .nav-link {
+        color: white !important;
+        transition: color 0.3s;
+      }
+
+      .nav-link:hover {
+        color: #ffd6d6 !important;
+      }
+
+      /* Hamburger for small screens */
+      .navbar-toggler {
+        border: none;
+      }
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+
+      /* Nav alignment */
+      .navbar-nav {
+        text-align: left;
+      }
+      @media (max-width: 768px) {
+        .navbar-nav {
+          text-align: center;
+          width: 100%;
+        }
+      }
+      .navbar-nav .nav-item {
+        display: inline-block;
+        float: none;
+      }
+
+      /* Section styling */
+      section {
+        padding: 10px 0;
+      }
+
+      /* About Me card effect */
+      .about-text {
+        background: #fff0f0;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s, transform 0.3s;
+      }
+
+      .about-text:hover {
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        transform: translateY(-3px);
+      }
+
+      h1 {
+        color: #a02525;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+      }
+
+      /* Image hover shadow */
+      .img-fluid {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .img-fluid:hover {
+        transform: scale(1.03);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      }
+
+      /* Google Translate spacing */
+      #google_translate_element {
+        margin-top: 10px;
       }
     </style>
   </head>
+
   <body>
     <header>
-      <nav
-        role="navigation"
-        aria-label="Main navigation"
-        style="
-          background-color: rgb(160, 37, 37);
-          color: #7a1a1a;
-          padding: 17px;
-          font-size: 20px;
-          font-family: 'Times New Roman', Times, serif;
-          width: 100%;
-        "
-      >
+      <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <div class="d-flex justify-content-between align-items-center w-100">
-            <!-- Logo Left -->
-            <a
-              href="/"
-              class="d-flex align-items-center text-decoration-none"
-              style="color: white; font-size: 30px; font-weight: bold; font-family: 'Times New Roman', Times, serif;"
-            >
-              Patience Aturanitwe
-            </a>
+          <!-- Logo Left -->
+          <a href="/" class="navbar-brand">Patience Aturanitwe</a>
 
-            <!-- Nav + Translate Right -->
-            <div class="d-flex align-items-center">
-              <ul class="nav mb-0">
-                <li>
-                  <a href="index.html" class="nav-link" style="color: white;">Home</a>
-                </li>
-                <li>
-                  <a href="about.html" class="nav-link" style="color: white;">About</a>
-                </li>
-                <li>
-                  <a href="projects.html" class="nav-link" style="color: white;">Projects</a>
-                </li>
+          <!-- Toggler for small screens -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-               <li><a href="services.html" class="nav-link" style="color: white;">Services</a></li>
-                <li><a href="cv.html" class="nav-link" style="color: white;">CV</a></li>
-                <li>
-                  <a href="contact.html" class="nav-link" style="color: white;">Contact</a>
-                </li>
-              </ul>
+          <!-- Nav Links -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="projects.html" class="nav-link">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a href="services.html" class="nav-link">Services</a>
+              </li>
+              <li class="nav-item">
+                <a href="cv.html" class="nav-link">CV</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
 
-              <!-- Translate Dropdown -->
-              <div id="google_translate_element" style="margin-left: 15px"></div>
-            </div>
+            <!-- Translate Dropdown -->
+            <div id="google_translate_element" class="ms-lg-3 mt-3 mt-lg-0"></div>
           </div>
         </div>
       </nav>
@@ -110,19 +182,32 @@
       <div class="row align-items-center">
         <!-- Left Column: Image -->
         <div class="col-md-6 mb-4 text-center">
-          <img src="images/pesh.jpeg" alt="Aturanitwe Patience" class="img-fluid rounded" style="max-height: 400px;">
+          <img
+            src="images/pic.jpeg"
+            alt="Aturanitwe Patience"
+            class="img-fluid"
+            style="max-height: 400px"
+          />
         </div>
+
         <!-- Right Column: Text -->
         <div class="col-md-6 mb-4 text-center">
-          <h1 style="color: rgb(160, 37, 37); font-weight: bold; font-family: 'Times New Roman', Times, serif;">About Me</h1>
-          
-          <p style="font-size: 1.1rem; line-height: 1.7; font-family: 'Times New Roman', Times, serif;">
-           I’m Patience Aturanitwe, a passionate Junior Web Developer and Graphic Designer who loves turning ideas into engaging, user-friendly digital experiences. I blend creativity with technical skills using HTML, CSS, Bootstrap, Adobe Photoshop, and Canva to craft websites and visuals that leave a lasting impact. Every project is an opportunity for me to innovate, solve problems, and make technology more accessible and meaningful for users.
-          </p>
+          <div class="about-text">
+            <h1>About Me</h1>
+            <p>
+              I’m Patience Aturanitwe, a passionate Junior Web Developer and Graphic Designer
+              who loves turning ideas into engaging, user-friendly digital experiences. I blend
+              creativity with technical skills using HTML, CSS, Bootstrap, Adobe Photoshop, and
+              Canva to craft websites and visuals that leave a lasting impact. Every project is
+              an opportunity for me to innovate, solve problems, and make technology more
+              accessible and meaningful for users.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       crossorigin="anonymous"
@@ -132,6 +217,7 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Google Translate -->
     <script type="text/javascript">
       function googleTranslateElementInit() {
         new google.translate.TranslateElement(
@@ -144,6 +230,9 @@
         );
       }
     </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
   </body>
 </html>

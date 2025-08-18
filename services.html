@@ -20,6 +20,19 @@
     align-items: center;
   }
 
+  * Default: left-aligned for large screens */
+.navbar-nav {
+  text-align: left;
+  width: auto; /* keeps items naturally aligned */
+}
+
+/* Small screens: center the nav links */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+}
   .navbar-nav .nav-link {
     padding: 0 10px;
     font-size: 20px;
@@ -60,7 +73,7 @@
       border: none;
     }
     footer {
-      background-color: #a02525;
+      background-color: #5f0909;
       color: white;
       text-align: center;
       padding: 25px 20px;
@@ -81,7 +94,7 @@
 
   <!-- Navbar -->
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgb(160, 37, 37);">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #5f0909;">
     <div class="container">
       <!-- Brand -->
       <a class="navbar-brand fw-bold" href="index.html" style="font-size: 30px;">Patience Aturanitwe</a>
@@ -188,7 +201,7 @@
   </section>
 
   <!-- Call to Action -->
-  <section style="background-color: maroon; color:white; padding:60px 30px; text-align:center;  margin:20px 0;">
+  <section style="background-color: #5f0909; color:white; padding:60px 30px; text-align:center;  margin:20px 0;">
     <h2 style="font-size:36px; font-weight:bold;">Ready to start your project?</h2>
     <p style="font-size:20px;">Let's collaborate to bring your ideas to life. Contact me today!</p>
     <a href="contact.html" style="display:inline-block; background-color:white; color:rgb(160,37,37); padding:12px 30px; border-radius:50px; font-weight:bold; text-decoration:none;">Get in Touch</a>
