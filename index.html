@@ -220,12 +220,12 @@
       <!-- Footer -->
 <footer style="background-color:#5f0909; color:white; padding:20px 10px; font-family:'Arial', sans-serif; font-size:0.85rem;">
   <div class="container" style="max-width:1100px; margin:auto;">
-    <div style="display:flex; justify-content:space-between; flex-wrap:wrap; text-align:center; gap:20px;">
+    <div id="footer-flex" style="display:flex; justify-content:space-between; flex-wrap:wrap; text-align:center; gap:20px;">
 
       <!-- Quick Links -->
       <div style="flex:1; min-width:150px;">
         <h6 style="margin-bottom:6px; font-weight:bold; letter-spacing:1px; color:#f8d49d;">Quick Links</h6>
-        <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:10px;">
+        <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:5px;">
           <a href="index.html" style="color:white; text-decoration:none; transition:0.3s;" onmouseover="this.style.color='#f8d49d'" onmouseout="this.style.color='white'">Home</a>
           <a href="about.html" style="color:white; text-decoration:none; transition:0.3s;" onmouseover="this.style.color='#f8d49d'" onmouseout="this.style.color='white'">About</a>
           <a href="projects.html" style="color:white; text-decoration:none; transition:0.3s;" onmouseover="this.style.color='#f8d49d'" onmouseout="this.style.color='white'">Projects</a>
@@ -238,7 +238,7 @@
       <!-- Contact Icons -->
       <div style="flex:1; min-width:120px;">
         <h6 style="margin-bottom:6px; font-weight:bold; letter-spacing:1px; color:#f8d49d;">Contact</h6>
-        <div style="display:flex; justify-content:center; gap:12px;">
+        <div style="display:flex; justify-content:center; gap:5px;">
           <a href="mailto:pe2023sh@gmail.com" aria-label="Email" style="color:white; font-size:1.2rem; display:flex; align-items:center; justify-content:center; width:35px; height:35px; background:#7a0c0c; border-radius:50%; transition:0.3s;"
              onmouseover="this.style.background='#f8d49d'; this.style.color='#5f0909'" onmouseout="this.style.background='#7a0c0c'; this.style.color='white'">
             <i class="bi bi-envelope"></i>
@@ -257,7 +257,7 @@
       <!-- Follow Me Icons -->
       <div style="flex:1; min-width:120px;">
         <h6 style="margin-bottom:6px; font-weight:bold; letter-spacing:1px; color:#f8d49d;">Follow Me</h6>
-        <div style="display:flex; justify-content:center; gap:12px;">
+        <div style="display:flex; justify-content:center; gap:5px;">
           <a href="https://www.facebook.com/share/19EvPMSDmx/" target="_blank" aria-label="Facebook" style="color:white; font-size:1.2rem; display:flex; align-items:center; justify-content:center; width:35px; height:35px; background:#7a0c0c; border-radius:50%; transition:0.3s;"
              onmouseover="this.style.background='#f8d49d'; this.style.color='#5f0909'" onmouseout="this.style.background='#7a0c0c'; this.style.color='white'">
             <i class="bi bi-facebook"></i>
@@ -278,7 +278,18 @@
       &copy; 2025 Aturanitwe Patience. All Rights Reserved.
     </div>
   </div>
+
+  <!-- Responsive stacking -->
+  <style>
+    @media (max-width: 768px) {
+      #footer-flex {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+    }
+  </style>
 </footer>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
