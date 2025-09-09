@@ -24,6 +24,24 @@
     width: auto; /* keeps items naturally aligned */
   }
 
+
+
+  /* Prevent navbar height from expanding */
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Control logo size separately */
+.navbar-brand img {
+  height: 120px;  /* increase as needed */
+  width: auto;    /* maintain aspect ratio */
+  max-height: 120px; /* keeps nav height in check */
+  object-fit: contain;
+  margin-top: -10px; /* optional: adjust vertical position */
+  margin-bottom: -10px; /* optional: adjust vertical position */
+}
+
 /* Small screens: center the nav links */
 @media (max-width: 768px) {
   .navbar-nav {
@@ -63,10 +81,12 @@
 
     <!-- Navbar -->
     <header>
-      <nav class="navbar navbar-expand-lg fixed-top" style="background-color:maroon; padding:17px; font-size:20px;">
+      <nav class="navbar navbar-expand-lg fixed-top" style="background-color:maroon; font-size:20px;">
         <div class="container">
       <!-- Brand -->
-      <a class="navbar-brand fw-bold" href="index.html" style="font-size: 30px; color: white;">Patience Aturanitwe</a>
+       <a class="navbar-brand fw-bold" href="index.html">
+  <img src="images/namelogo-removebg-preview.png" alt="Logo">
+</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
           </button>

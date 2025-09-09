@@ -97,6 +97,23 @@
         object-fit: cover;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
+
+      /* Prevent navbar height from expanding */
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Control logo size separately */
+.navbar-brand img {
+  height: 120px;  /* increase as needed */
+  width: auto;    /* maintain aspect ratio */
+  max-height: 120px; /* keeps nav height in check */
+  object-fit: contain;
+  margin-top: -10px; /* adjust vertical position */
+  margin-bottom: -10px; /* optional: adjust vertical position */
+}
+
     </style>
   </head>
   <body>
@@ -105,7 +122,6 @@
         class="navbar navbar-expand-lg"
         style="
           background-color: #5f0909;
-          padding: 17px;
           font-size: 20px;
           font-family: 'Times New Roman', Times, serif;
           position: fixed;
@@ -115,7 +131,10 @@
       >
         <div class="container">
       <!-- Brand -->
-      <a class="navbar-brand fw-bold" href="index.html" style="font-size: 30px; color: white;">Patience Aturanitwe</a>
+       <a class="navbar-brand fw-bold" href="index.html">
+  <img src="images/namelogo-removebg-preview.png" alt="Logo">
+</a>
+
 
           <!-- Toggler for mobile -->
           <button
